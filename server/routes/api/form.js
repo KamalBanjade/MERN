@@ -1,10 +1,10 @@
-// routes/api/signin.js
+// routes/api/form.js
 
 const express = require('express');
 const router = express.Router();
 
-// Load User model
-const User = require('../../models/User');
+// Load forms model
+const forms = require('../../../models/forms'); // Adjusted import path
 
 // @route   POST api/signin
 // @desc    Sign in a user
@@ -13,7 +13,7 @@ router.post('/', (req, res) => {
   const { email, password } = req.body;
 
   // Find user by email
-  User.findOne({ email })
+  forms.findOne({ email }) // Changed from User to forms
     .then(user => {
       if (!user) {
         return res.status(404).json({ emailnotfound: 'Email not found' });

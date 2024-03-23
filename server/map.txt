@@ -10,3 +10,21 @@ C:\
             └── node_modules
 
 //"mongodb+srv://kamalbanjade:K%40M%40L@cluster0.sf0urdt.mongodb.net/books?retryWrites=true&w=majority&appName=Cluster0";
+
+i have created a project name as SignIn_Form and under that i have  two folders "client","model" & "server". Inside the "model" folder there is  file named forms.js. inside server i have  file named as app.js and folders "config" and "routes" and under config i have a file name db.js and under the routes i have another folder named as api and under it i have a file named as form.js
+
+SignIn_Form
+│
+├── client/
+│   
+├── model/
+│   └── forms.js
+│
+└── server/
+    ├── app.js
+    ├── config/
+    │   └── db.js
+    │
+    └── routes/
+        └── api/
+            └── form.js

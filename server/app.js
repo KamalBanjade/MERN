@@ -1,11 +1,12 @@
 const express = require('express');
 const connectDB = require('./config/db');
-const routes = require('../routes/api/form'); // Import the sign-in routes
+const routes = require('./routes/api/form'); // Import the sign-in routes
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-
+connectDB();
 // use the cors middleware with the
 // origin and credentials options
 app.use(cors({ origin: true, credentials: true }));
@@ -16,10 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // use the routes module as a middleware
 // for the /api/books path
-app.use("/api/books", routes);
+app.use("/api/form", routes);
 
 // Connect Database
-connectDB();
+
 
 app.get("/", (req, res) => res.send("Hello world!"));
 const port = process.env.PORT || 8082;
