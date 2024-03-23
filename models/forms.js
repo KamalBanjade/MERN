@@ -20,4 +20,4 @@ const SignInSchema = new mongoose.Schema({
   }
 });
 
-module.exports = SignIn = mongoose.model('signin', SignInSchema);
+module.exports = forms = mongoose.model('forms', SignInSchema);
